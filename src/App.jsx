@@ -1,20 +1,12 @@
 import { Box } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import ListCharacters from './components/ListCharacters'
 
 function App() {
 
-  useEffect(() => {
-    async function fecthData() {
-      const response = await fetch('https://rickandmortyapi.com/api/character');
-      const data = await response.json();
-      console.log(data.results)
-    }
-    fecthData()
-  }, [])
-
   return (
     <Box >
-      Rick and mory API
+      <h1>Rick and morty API</h1>
+      <ListCharacters />
     </Box>
   )
 }
