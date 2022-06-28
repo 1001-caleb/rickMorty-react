@@ -6,11 +6,12 @@ export default function Character({ character }) {
     <Flex
       boxShadow='md'
       w={[120, 200, 300]}
-      h={[230, 300, 400]}
+      h={[200, 300, 400]}
       direction='column'
       justify='center'
       align='center'
       m='auto'
+      mt='20'
       bgColor='whiteAlpha.200' >
       
       <Image
@@ -18,6 +19,8 @@ export default function Character({ character }) {
         w={[100, 150, 200]}
         src={character.image}
         alt={character.name}
+        position='relative'
+        top={['-10', '-20', '-20']}
       />
 
       <Text
