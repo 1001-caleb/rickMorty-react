@@ -1,14 +1,14 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { Flex } from '@chakra-ui/react'
+import { Flex, Text, Button } from '@chakra-ui/react'
 import Character from './Character'
 
 function NavPage({page, setPage}) {
     return (
-        <header>
-            <p>Page : {page}</p>
-            <button onClick={() => setPage(page + 1 )}>next page {page + 1 }</button>
-        </header>
+        <Flex justify='space-between' px='6'>
+            <Text fontSize='xl' color='white'>Page : {page}</Text>
+            <Button fontSize='xl' size={['xs', 'sm', 'md']} onClick={() => setPage(page + 1 )}>next page {page + 1 }</Button>
+        </Flex>
     )
 }
 
@@ -23,6 +23,7 @@ export default function ListCharacters() {
             const data = await response.json();
             setLoading(false);
             setCharacters(data.results)
+            console.log(data.results)
         }
         fecthData()
     }, [page])

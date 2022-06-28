@@ -6,7 +6,7 @@ export default function Character({ character }) {
     <Flex
       boxShadow='md'
       w={[120, 200, 300]}
-      h={[200, 300, 400]}
+      h={[230, 300, 400]}
       direction='column'
       justify='center'
       align='center'
@@ -24,6 +24,16 @@ export default function Character({ character }) {
         fontSize={['xl', '2xl']}
         color='white'
         textAlign='center'> {character.name}
+      </Text>
+      <Text
+        fontSize={['lg', 'xl']}
+        color='green.500'
+        textAlign='center'> {character.status}
+      </Text>
+      <Text
+        fontSize={['lg', 'xl']}
+        color='green.100'
+        textAlign='center'> {character.species}
       </Text>
     </Flex>
   )
