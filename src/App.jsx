@@ -4,7 +4,7 @@ import ListCharacters from './components/ListCharacters'
 function App() {
 
   return (
-    <Box >
+    <Box bgColor='blackAlpha.900'>
       <h1>Rick and morty API</h1>
       <ListCharacters />
     </Box>

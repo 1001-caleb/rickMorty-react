@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-
+import { Flex } from '@chakra-ui/react'
 import Character from './Character'
 
 function NavPage({page, setPage}) {
@@ -30,6 +30,7 @@ export default function ListCharacters() {
     return (
         <>
             <NavPage page={page} setPage={setPage}></NavPage>
+            <Flex wrap='wrap' gap='10'>
             {
                 loading ? (<h1>Cargando</h1>) :
 
@@ -39,6 +40,8 @@ export default function ListCharacters() {
                         )
                     }))
             }
+            </Flex>
+          
              <NavPage page={page} setPage={setPage}></NavPage>
         </>
 
