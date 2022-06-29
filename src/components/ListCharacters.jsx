@@ -20,16 +20,17 @@ function NavPage({ page, setPage }) {
       </Flex>
 
       <Flex justify="space-between" px="6">
-        <Button
-          fontSize="xl"
-          size={["xs", "sm", "md"]}
-          onClick={() => setPage(page - 1)}
-        >
-            {
-                page === 1 ? '' : `back ${page - 1}`
-            }
-         
-        </Button>
+        {page >= 2 ? (
+          <Button
+            fontSize="xl"
+            size={["xs", "sm", "md"]}
+            onClick={() => setPage(page - 1)}
+          >
+            Back page
+          </Button>
+        ) : (
+          ""
+        )}
       </Flex>
     </>
   );
